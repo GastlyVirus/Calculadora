@@ -1,0 +1,28 @@
+#contenedor {
+    height: 420px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* margin: 0 auto; */
+}
+
+#contenedor form {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#contenedor input[type=textfield] {
+    font-family: "Roboto";
+    height: 25%;
+    width: 100%;
+    cursor: default;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 50px;
+    border: 0;
+    outline: none;
+}
