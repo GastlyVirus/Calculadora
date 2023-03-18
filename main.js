@@ -37,7 +37,7 @@ function init() {
 
   for (var i = 0; i < initialLines; ++i) lines.push(new Line(starter));
 
-  ctx.fillStyle = "#222";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, w, h);
 
   // if you want a cookie ;)
@@ -46,7 +46,7 @@ function init() {
 
 
 function getColor(x) {
-  return "hsl( hue, 80%, 50% )".replace("hue", (x / w) * 360 + frame);
+  return "hsl( hue, 100%, 50% )".replace("hue", (x / w) * 360 + frame);
 }
 
 
@@ -56,9 +56,9 @@ function anim() {
   ++frame;
 
   ctx.shadowBlur = 0;
-  ctx.fillStyle = "rgba(0,0,0,.02)";
+  ctx.fillStyle = "rgba(0,0,0,0.07)";
   ctx.fillRect(0, 0, w, h);
-  ctx.shadowBlur = 0.5;
+  ctx.shadowBlur = 0.9;
 
   for (var i = 0; i < lines.length; ++i)
     if (lines[i].step()) {
