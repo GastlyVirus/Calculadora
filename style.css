@@ -19,7 +19,7 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.01);  
-  border-radius: 10px;
+  border-radius: 15px;
   backdrop-filter: blur(25px);
   border: 1px solid #ffffff;
 }
@@ -36,7 +36,7 @@ canvas {
   cursor: default;
   outline: none;
   text-shadow: 3px 2px 4px white;
-  border-bottom: 1px solid #ffffff;
+  border: none;
   text-align: right;
   font-size: 70px;
   color: white;
@@ -46,11 +46,11 @@ canvas {
 #contenedor input[type="button"],
 input[type="reset"] {
   width: 21.3%;
-  height: 14.6%;
+  height: 14.8%;
   margin: 5px;
   font-size: 45px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   border: 1px solid #ffffff;
   background: rgba(255, 255, 255, 0.05);
