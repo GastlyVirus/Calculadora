@@ -85,8 +85,9 @@ input[type="reset"]:active{
   
   #contenedor input[type="button"],
   input[type="reset"] {
-    width: 18.5%;
-    height: 13.7%;
+    width: 15%;
+    height: 11%;
+    margin: 8px;
     font-size: 30px;
     border-radius: 5px;
     color: rgb(0, 0, 0);
