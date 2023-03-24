@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'DS-Digital';
+  font-family: "DS-Digital";
 }
 
 canvas {
@@ -39,7 +39,7 @@ canvas {
   text-align: right;
   font-size: 70px;
   color: white;
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0);
 }
 
 #contenedor input[type="button"],
@@ -56,19 +56,40 @@ input[type="reset"] {
 }
 
 #contenedor input[type="button"]:active,
-input[type="reset"]:active{
+input[type="reset"]:active {
   border: none;
   text-shadow: 3px 2px 4px white;
   box-shadow: 3px 2px 4px white;
   background: rgba(255, 255, 255, 0);
 }
 
+footer {
+  width: 350px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 520%);
+  border-radius: 15px;
+  backdrop-filter: blur(25px);
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0);
+}
 
+#imageContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socialMedia {
+  width: 30px;
+  margin-top: 8px;
+}
 
 /*----------------------------Celular----------------------------*/
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
   #contenedor {
-    width: 150px;
+    width: 200px;
     height: 250px;
     border: 1px solid #000000;
     background: white;
@@ -81,10 +102,10 @@ input[type="reset"]:active{
     text-shadow: 2px 1px 3px rgb(0, 0, 0);
     background: rgba(255, 255, 255, 0.05);
   }
-  
+
   #contenedor input[type="button"],
   input[type="reset"] {
-    width: 12%;
+    width: 15%;
     height: 10%;
     margin: 8px;
     font-size: 20px;
@@ -95,15 +116,25 @@ input[type="reset"]:active{
   }
 
   #contenedor input[type="button"]:active,
-input[type="reset"]:active{
-  box-shadow: none;
-}
-}
+  input[type="reset"]:active {
+    box-shadow: none;
+  }
 
+  footer {
+    width: 200px;
+    height: 30px;
+    background: white;
+    transform: translate(-50%, 450%);
+  }
 
+  .socialMedia {
+    width: 20px;
+    margin-top: 5px;
+  }
+}
 
 /*----------------------------Tablet----------------------------*/
-@media screen and (min-width: 531px) and (max-width: 768px){
+@media screen and (min-width: 531px) and (max-width: 768px) {
   #contenedor {
     width: 300px;
     height: 400px;
@@ -118,7 +149,7 @@ input[type="reset"]:active{
     border: none;
     text-shadow: 2px 1px 3px white;
   }
-  
+
   #contenedor input[type="button"],
   input[type="reset"] {
     width: 20.7%;
@@ -131,8 +162,19 @@ input[type="reset"]:active{
   }
 
   #contenedor input[type="button"]:active,
-input[type="reset"]:active{
-  box-shadow: none;
-  text-shadow: none;
-}
+  input[type="reset"]:active {
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  footer {
+    width: 300px;
+    height: 40px;
+    background: black;
+  }
+
+  .socialMedia {
+    width: 25px;
+    margin-top: 7px;
+  }
 }
