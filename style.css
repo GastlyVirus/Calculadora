@@ -49,10 +49,16 @@ input[type="reset"] {
   margin: 6px;
   font-size: 45px;
   cursor: pointer;
-  border-radius: 15px;
   color: white;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+}
+
+#contenedor input[type="button"]:hover,
+input[type="reset"]:hover{
   border: 1px solid #ffffff;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 15px;
 }
 
 #contenedor input[type="button"]:active,
@@ -103,7 +109,6 @@ footer {
     height: 10%;
     margin: 11px;
     font-size: 25px;
-    border-radius: 5px;
   }
 
   footer {
