@@ -97,10 +97,12 @@ footer {
   #contenedor {
     width: 250px;
     height: 350px;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   #contenedor input[type="textfield"] {
     font-size: 50px;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   #contenedor input[type="button"],
@@ -109,6 +111,7 @@ footer {
     height: 10%;
     margin: 11px;
     font-size: 25px;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   footer {
