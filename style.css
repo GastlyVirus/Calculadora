@@ -71,16 +71,16 @@ input[type="reset"]:active{
   #contenedor {
     width: 200px;
     height: 350px;
-    border: 1px solid #000000;
-    background: white;
+    border: 1px solid #ffffff;
+    background: rgb(0, 0, 0);
   }
 
   #contenedor input[type="textfield"] {
     border: none;
     font-size: 50px;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 1px 3px rgb(0, 0, 0);
-    background: rgba(255, 255, 255, 0.05);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 1px 3px rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.05);
   }
   
   #contenedor input[type="button"],
@@ -90,14 +90,15 @@ input[type="reset"]:active{
     margin: 8px;
     font-size: 30px;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 1px 3px rgb(0, 0, 0);
-    box-shadow: 3px 2px 4px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 1px 3px rgb(255, 255, 255);
+    box-shadow: 3px 2px 4px rgb(255, 255, 255);
   }
 
   #contenedor input[type="button"]:active,
 input[type="reset"]:active{
   box-shadow: none;
+  text-shadow: none;
 }
 }
 

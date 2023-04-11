@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +9,30 @@
     <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
     <title>Claculadora</title>
 </head>
-
 <body>
-    <!-- Contenedor de la animacion -->
+    <!-- El elemento <canvas></canvas> es una etiqueta HTML5 que se utiliza para crear gráficos y animaciones en la web utilizando JavaScript. Algunas de las propiedades más comunes del elemento <canvas> son: 
+        width: Esta propiedad define el ancho del lienzo (canvas) en píxeles. Puede ser establecida utilizando un valor numérico, por ejemplo: <canvas width="800"></canvas>, o a través de JavaScript utilizando la propiedad canvas.width = valor.
+        height: Esta propiedad define la altura del lienzo (canvas) en píxeles. Puede ser establecida utilizando un valor numérico, por ejemplo: <canvas height="600"></canvas>, o a través de JavaScript utilizando la propiedad canvas.height = valor.
+        getContext(): Este método es utilizado para obtener el contexto de dibujo del lienzo. El contexto de dibujo es un objeto de JavaScript que permite manipular los gráficos en el lienzo. Por lo general, se utiliza el contexto 2D mediante el método getContext('2d'), por ejemplo: const ctx = canvas.getContext('2d').
+        style: Esta propiedad permite establecer estilos CSS para el lienzo, como el color de fondo, el margen, el borde, etc. Puedes acceder a las propiedades de estilo mediante la propiedad canvas.style, por ejemplo: canvas.style.backgroundColor = 'lightgray'.
+        toDataURL(): Este método permite convertir el contenido del lienzo en una URL de datos en formato de imagen. Puedes usarlo para guardar el lienzo como una imagen en el lado del cliente. Por ejemplo: const dataURL = canvas.toDataURL('image/png').
+        getContext('webgl') y getContext('webgl2'): Estos son contextos de dibujo 3D que permiten realizar gráficos en 3D utilizando WebGL, una API de gráficos en 3D basada en OpenGL para la web. -->
     <canvas id=c></canvas>
+
 
     <!-- Contenedor de la calculadora -->
     <div id="contenedor">
 
+
         <!-- Calculadora -->
         <form name="calculadora">
 
+
+            <!-- El resultado de las operaciones de la calculadora se muestra en un campo de texto (<input type="textfield">) con el nombre "resultado". Este campo de texto tiene el atributo "readonly" que lo hace de solo lectura, lo que significa que el usuario no puede escribir directamente en él y solo puede visualizar el resultado. -->
             <input type="textfield" name="resultado" value="" autocomplete="off" readonly>
 
+
+            <!-- Los botones numéricos del 0 al 9 y los operadores matemáticos (+, -, *, /) se representan como elementos <input> con el atributo type="button" y la clase "button". Cada uno de estos botones tiene un valor y un atributo onclick que especifica una función JavaScript para ejecutar cuando se hace clic en el botón. La función JavaScript asociada a cada botón numérico y operador concatena su valor al valor actual del campo de texto "resultado". Por ejemplo, al hacer clic en el botón "7", se ejecuta la función onclick="document.calculadora.resultado.value+='7'", que agrega "7" al final del valor actual en el campo de texto "resultado". -->
             <input class="button" type="button" value="7" onclick="document.calculadora.resultado.value+='7'">
             <input class="button" type="button" value="8" onclick="document.calculadora.resultado.value+='8'">
             <input class="button" type="button" value="9" onclick="document.calculadora.resultado.value+='9'">
@@ -39,8 +49,10 @@
             <input class="button" type="button" value="-" onclick="document.calculadora.resultado.value+='-'">
             <br>
             <input class="button" type="button" value="0" onclick="document.calculadora.resultado.value+='0'">
+            <!-- El botón "C" es un botón de reinicio (<input type="reset">) que restablece el valor del formulario a su estado inicial. -->
             <input class="button" type="reset" value="C">
-            <!-- La función "eval()" evalúa un código JavaScript representado como una cadena de caracteres, sin referenciar a un objeto en particular. -->
+            <!-- El botón "=" realiza la evaluación de la expresión matemática ingresada en el campo de texto "resultado" utilizando la función eval() de JavaScript, que toma la cadena de caracteres en el campo de texto y la evalúa como una expresión JavaScript. El resultado se muestra nuevamente en el campo de texto "resultado". -->
+            <!-- La función "eval()" evalúa un código JavaScript representado como una cadena de caracteres, sin referenciar a un objeto en particular. El uso de eval() puede ser peligroso en aplicaciones web debido a posibles vulnerabilidades de seguridad. Se recomienda encarecidamente validar y sanear cualquier entrada del usuario antes de utilizarla en una función eval() para evitar ataques de inyección de código malicioso. -->
             <input class="button" type="button" value="="
                 onclick="document.calculadora.resultado.value=eval(document.calculadora.resultado.value)">
             <input class="button" type="button" value="+" onclick="document.calculadora.resultado.value+='+'">
@@ -49,5 +61,4 @@
     </div>
     <script src="main.js"></script>
 </body>
-
 </html>
